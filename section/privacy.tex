@@ -1,0 +1,13 @@
+\section{Anomaly Detection}
+\subsection*{EM}
+$\log p_\theta(x) = E_z[\log \frac{p_\theta(x, z)}{q(z)}] + E_z[\log\frac{q(z)}{p_\theta(z | x)}] = M(\theta, q) + E(\theta, q)$
+$\max_{\theta'} M(\theta', q^*) \ge \log p_\theta(x)$
+
+E-step: $q^* = \argmin_q E(\theta^{t-1}, q)$
+
+M-step: $\theta^t = \argmax_\theta M(\theta, q^*)$
+
+\subsection*{PCA Projection}
+
+$Var(u^\top x) = u^\top S u$, $S = (x - \bar{x})(x - \bar{x})^\top$.
+
